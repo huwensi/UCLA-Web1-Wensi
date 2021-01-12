@@ -1,9 +1,28 @@
-import React from 'react'
+import { divide } from 'lodash';
+import React, { useState } from 'react'
 
 const SunAndMoon = () => {
-    return (
-        <div>The sun and The Moon </div>
-    )
-}
 
-export default SunAndMoon
+    const [imageSrc, imageSrcupdate] = useState ('/asset/img/moon.png')
+
+    const imageOver = () => {
+        imageSrcupdate('/assets/img/sun.png');
+    }
+    const imageOut = () => {
+        imageSrcupdate('/assets/img/moon.png');
+    }
+     
+
+    return (
+        <div>
+            The Sun and The moon
+           <img
+               src={ imageSrc }
+               onMouseOver= { imageOver }
+               onMouseOut={ imageOut }
+            />
+           </div>
+        )
+    }
+
+export default SunAndMoon;
