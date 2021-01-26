@@ -1,7 +1,6 @@
-import { divide } from 'lodash';
 import React, { useState } from 'react'
 
-const SunAndMoon = () => {
+const Login = () => {
 
     const [imageSrc, imageSrcupdate] = useState ('/asset/img/moon.png')
 
@@ -11,18 +10,18 @@ const SunAndMoon = () => {
     const imageOut = () => {
         imageSrcupdate('/assets/img/moon.png');
     }
-     
 
     return (
         <div>
             The Sun and The moon
            <img
                src={ imageSrc }
+               alt='The Sun and Moon'
                onMouseOver= { imageOver }
                onMouseOut={ imageOut }
             />
-           </div>
-        )
-    }
+        </div>
+    )
+}
 
-export default SunAndMoon;
+export default Login;
