@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import LoginForm from './LoginForm';
 
 const Login = () => {
 
@@ -13,7 +14,11 @@ const Login = () => {
 
     return (
         <div>
-            The Sun and The moon
+            <h1>Login</h1>
+            <LoginForm />
+
+            <h2>Sun and Moon</h2>
+        
            <img
                src={ imageSrc }
                alt='The Sun and Moon'
