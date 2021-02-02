@@ -9,6 +9,9 @@ const Contact = () => {
     return (
         <div>
             <hi>Contact</hi>
+            <Profile />
+            <ContactForm />
+            <GoogleMap />
         </div>
     )
 }

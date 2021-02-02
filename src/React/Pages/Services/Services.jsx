@@ -3,7 +3,6 @@ import React from 'react';
 /* Components ---------------------------------*/
 import FilterNav from './FilterNav.jsx';
 import Gallery from './Gallery.jsx';
-import Gllery from './Gallery.jsx';
 
 const Services = () => {
     return (

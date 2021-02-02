@@ -10,12 +10,12 @@ import Login from './Pages/Login/Login.jsx';
 const Main = () => {
     return (
      <main> 
-        <switch>
+        <Switch>
             <Route path='/services' component={ Services } />
             <Route path='/contact' component={ Contact } />
             <Route path='/login' component={ Login } />
             <Route path='/' component={ Welcome } exact />
-         </switch>
+         </Switch>
     </main>
     )
 }
