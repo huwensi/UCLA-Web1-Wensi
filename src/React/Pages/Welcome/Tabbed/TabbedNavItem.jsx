@@ -10,12 +10,12 @@ const TabbedNavItem = ({tabItem, changeTabs, chosenTab}) => {
 
     const theClassName = classnames({
         'TabbedNaveItem':true,
-        'active:':tabItem.title === chosenTab.title,
+        'active': tabItem.title === chosenTab.title,
     }); 
 
     return (
         <TabbedNavItemStyled 
-            className='TabbedNavItem'
+            className={ theClassName }
             onClick={ handleTabClick }
         >
             { tabItem.title }

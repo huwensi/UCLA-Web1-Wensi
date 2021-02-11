@@ -1,24 +1,55 @@
 import React from "react";
 import { BrowserRouter } from 'react-router-dom';
+import styled from 'styled-components';
 
-import Nav from "./Nav.jsx";
-import Footer from "./Footer.jsx";
+/* c3 + tab -----------------------------*/
+
+/* Scripts ------------------------------*/
+import { mq } from '../common/media_queries.js';
+import useMediaQuery from '../common/useMediaQuery.js';
+
+
+
+/* Components ---------------------------*/
 import Header from "./Header.jsx";
+import NavMobile from "./Nav/NavMobile.jsx";
+import NavLarge from "./Nav/NavLarge.jsx";
+import Footer from "./Footer.jsx";
 import Main from "./Main.jsx";
 
 
 const Container = () => {
 
+    const { isSmall } = useMediaQuery();
+
     return (
         <BrowserRouter>
-            <div className='Container'>
+            <ContainerStyled className='Container'>
                 <Header />
-                <Nav />
+                {
+                    isSmall
+                    ? <NavMobile />
+                    : <NavLarge />}
                 <Main />
                 <Footer />
-            </div>
+                </ContainerStyled>
         </BrowserRouter>
     );
 }
 
-export default Container
+export default Container;
+
+const ContainerStyled = styled.div`
+    background-color: pink; 
+
+    @media (min-width: 400px){
+        background-color: yellow;
+    }
+    @media ${mq.desktop} {
+        background-color: maroon;
+    }
+    @media ${mq.ultrawide} {
+        background-color: purple 
+    }
+
+`;
