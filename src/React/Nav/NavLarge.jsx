@@ -8,7 +8,6 @@ const Navlarge = () => {
 
     return (
         <NavlargeStyled className='Navlarge'>
-            Navlarge 
             <Nav />
         </NavlargeStyled>
     );
